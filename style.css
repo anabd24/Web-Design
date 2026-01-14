@@ -1,0 +1,67 @@
+/* Reset spacing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.4;
+}
+
+/* Page layout */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+nav {
+  display: flex;
+  gap: 16px;
+}
+
+/* Main section */
+main {
+  margin-bottom: 48px;
+}
+
+main h2 {
+  margin-bottom: 16px;
+}
+
+/* Table layout */
+.products {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.products th,
+.products td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #000;                             /* layout only */
+}
+
+.products th:last-child,
+.products td:last-child {
+  text-align: right;
+}
+
+/* Footer */
+footer {
+  margin-top: 48px;
+  padding-top: 16px;
+  border-top: 1px solid #000;
+}
+  
+
+
