@@ -3,20 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title>Product</title>
-<link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
   <header>
     <h1>Product</h1>
-    <nav>
-      <a href="/Home/index.html">Home</a> |
-      <a href="/Product/product.html">Product</a> |
-      <a href="/Contact/contact.html">Contact</a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+    <nav class="nav-links">
+      <a href="../Home/index.html">Home</a>
+      <a href="product.html">Product</a>
+      <a href="../Contact/contact.html">Contact</a>
     </nav>
   </header>
 
   <main class="container">
+    <img
+      src="/Image/Product.png"
+      alt="Flat lay of feminine products including shoes, sunglasses, perfume, watch and handbag on pink background"
+      class="img-responsive img-round img-shadow product-banner"
+      loading="lazy"
+      decoding="async"
+    />
+
     <table class="products">
       <caption>Product List</caption>
       <tr>
@@ -37,5 +48,14 @@
   <footer>
     <p>My New Website – 2026</p>
   </footer>
+
+  <script>
+    const toggle = document.querySelector(".nav-toggle");
+    const nav = document.querySelector(".nav-links");
+
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("show");
+    });
+  </script>
 </body>
 </html>

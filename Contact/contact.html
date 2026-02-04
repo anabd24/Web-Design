@@ -3,37 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <title>Contact</title>
-  <link rel="stylesheet" href="../style.css">
-  <style>
-    
-  </style>
+  <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
   <header>
     <h1>Contact</h1>
-    <nav>
-      <a href="/Home/index.html">Home</a> 
-      <a href="/Product/product.html">Product</a> 
-      <a href="/Contact/contact.html">Contact</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+    <nav class="nav-links">
+      <a href="../Home/index.html">Home</a>
+      <a href="../Product/product.html">Product</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
-    <img src="/Image/picture.png" alt="Contact image" width="250">
+    <img
+      src="/Image/Contact.png"
+      alt="Contact illustration with envelope, phone and message icons on pink background"
+      class="img-responsive img-round img-shadow contact-photo"
+      loading="lazy"
+      decoding="async"
+    />
 
     <p>Phone: (641) 555-1234</p>
     <p>Email: webdesign@example.com</p>
 
-    <form>
+    <form action="#" method="post">
       <label>Name:
-        <input type="text" required>
+        <input type="text" name="name" required>
       </label><br><br>
 
       <label>Email:
-        <input type="email" required>
+        <input type="email" name="email" required>
       </label><br><br>
 
       <button type="submit">Send</button>
     </form>
   </main>
+
+  <footer>
+    <p>My New Website – 2026</p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector(".nav-toggle");
+    const nav = document.querySelector(".nav-links");
+
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("show");
+    });
+  </script>
+</body>
+</html>

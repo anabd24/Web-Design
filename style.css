@@ -27,10 +27,11 @@ header {
   margin-bottom: 32px;
 }
 
-nav {
+.nav-links {
   display: flex;
   gap: 16px;
 }
+
 
 /* Main section */
 
@@ -78,14 +79,92 @@ footer {
     align-items: center;
   }
 
-  nav {
-    justify-content: flex-end;
-  }
-
-  main {
-    max-width: 900px;
-    margin: 0 auto;
-  }
+  .nav-links {
+  justify-content: flex-end;
+}
 
 }
+
+/* ===== LU8 ===== */
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.img-round {
+  border-radius: 16px;
+}
+
+.img-shadow {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* Different size for each page image */
+
+.home-banner {
+  margin-bottom: 16px;
+  max-height: 260px;   /* smaller for Home */
+  object-fit: cover;
+}
+
+.product-banner {
+  margin-bottom: 16px;
+  max-height: 260px;   /* smaller for Product */
+  object-fit: cover;
+}
+
+.contact-photo {
+  margin-bottom: 16px;
+  max-height: 320px;   /* Contact can be a bit bigger */
+  object-fit: cover;
+}
+
+
+/* ===== LU09 Responsive Navigation ===== */
+
+.nav-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 6px 10px; 
+  cursor: pointer;
+  width: fit-content;
+}
+
+/* Desktop separators like | using CSS */
+.nav-links a + a::before {
+  content: "|";
+  margin-right: 16px;
+  color: #333;
+}
+
+/* Mobile behavior */
+@media (max-width: 767px) {
+  .nav-toggle {
+    display: inline-block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 10px;
+  }
+
+  .nav-links a + a::before {
+    content: "";
+    margin-right: 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
 
