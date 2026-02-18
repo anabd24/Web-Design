@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Product</title>
-  <link rel="stylesheet" href="../style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FIXED CSS PATH -->
+  <link rel="stylesheet" href="/Web-Design/style.css">
 </head>
 
 <body>
@@ -13,39 +16,50 @@
     <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
 
     <nav class="nav-links">
-      <a href="../Home/index.html">Home</a>
-      <a href="product.html">Product</a>
-      <a href="../Contact/contact.html">Contact</a>
+      <a href="/Web-Design/Home/index.html">Home</a>
+      <a href="/Web-Design/Product/product.html">Product</a>
+      <a href="/Web-Design/Contact/contact.html">Contact</a>
     </nav>
   </header>
 
   <main class="container">
+    <!-- FIXED IMAGE PATH -->
     <img
-      src="/Image/Product.png"
+      src="/Web-Design/Image/Product.png"
       alt="Flat lay of feminine products including shoes, sunglasses, perfume, watch and handbag on pink background"
       class="img-responsive img-round img-shadow product-banner"
       loading="lazy"
       decoding="async"
     />
 
-    <table class="products">
-      <caption>Product List</caption>
-      <tr>
-        <th>Name</th>
-        <th>Price</th>
-      </tr>
-      <tr>
-        <td>Product A</td>
-        <td>$0.00</td>
-      </tr>
-      <tr>
-        <td>Product B</td>
-        <td>$0.00</td>
-      </tr>
-    </table>
+    <!-- LU10 Responsive Table -->
+    <div class="table-wrap">
+      <table class="products">
+        <caption>Product List</caption>
+
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Product A</td>
+            <td>$0.00</td>
+          </tr>
+          <tr>
+            <td>Product B</td>
+            <td>$0.00</td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
   </main>
 
-  <footer>
+  <footer class="container">
     <p>My New Website – 2026</p>
   </footer>
 

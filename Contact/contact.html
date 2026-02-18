@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Contact</title>
-  <link rel="stylesheet" href="/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- FIXED CSS PATH -->
+  <link rel="stylesheet" href="/Web-Design/style.css">
 </head>
 
 <body>
@@ -12,15 +15,16 @@
     <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
 
     <nav class="nav-links">
-      <a href="../Home/index.html">Home</a>
-      <a href="../Product/product.html">Product</a>
-      <a href="contact.html">Contact</a>
+      <a href="/Web-Design/Home/index.html">Home</a>
+      <a href="/Web-Design/Product/product.html">Product</a>
+      <a href="/Web-Design/Contact/contact.html">Contact</a>
     </nav>
   </header>
 
-  <main>
+  <main class="container">
+    <!-- FIXED IMAGE PATH -->
     <img
-      src="/Image/Contact.png"
+      src="/Web-Design/Image/Contact.png"
       alt="Contact illustration with envelope, phone and message icons on pink background"
       class="img-responsive img-round img-shadow contact-photo"
       loading="lazy"
@@ -30,20 +34,30 @@
     <p>Phone: (641) 555-1234</p>
     <p>Email: webdesign@example.com</p>
 
-    <form action="#" method="post">
-      <label>Name:
-        <input type="text" name="name" required>
-      </label><br><br>
+    <!-- LU10 Responsive Form -->
+    <form class="contact-form" action="#" method="post">
 
-      <label>Email:
-        <input type="email" name="email" required>
-      </label><br><br>
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" required>
+      </div>
 
-      <button type="submit">Send</button>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" required>
+      </div>
+
+      <div class="form-row full">
+        <label for="message">Comment</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+
+      <button class="btn" type="submit">Send</button>
+
     </form>
   </main>
 
-  <footer>
+  <footer class="container">
     <p>My New Website – 2026</p>
   </footer>
 

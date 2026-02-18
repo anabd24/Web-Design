@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Home</title>
-  <link rel="stylesheet" href="../style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FIXED CSS PATH -->
+  <link rel="stylesheet" href="/Web-Design/style.css">
 </head>
 
 <body>
@@ -13,15 +16,16 @@
     <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
 
     <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="../Product/product.html">Product</a>
-      <a href="../Contact/contact.html">Contact</a>
+      <a href="/Web-Design/Home/index.html">Home</a>
+      <a href="/Web-Design/Product/product.html">Product</a>
+      <a href="/Web-Design/Contact/contact.html">Contact</a>
     </nav>
   </header>
 
-  <main>
+  <main class="container">
+    <!-- FIXED IMAGE PATH -->
     <img
-      src="/Image/Home.png"
+      src="/Web-Design/Image/Home.png"
       alt="Welcome banner for the website"
       class="img-responsive img-round img-shadow home-banner"
       loading="lazy"
@@ -35,7 +39,7 @@
     </p>
   </main>
 
-  <footer>
+  <footer class="container">
     <p>My New Website – 2026</p>
   </footer>
 
@@ -49,4 +53,3 @@
   </script>
 </body>
 </html>
-
